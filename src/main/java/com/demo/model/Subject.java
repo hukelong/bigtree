@@ -1,6 +1,6 @@
 package com.demo.model;
 
-import java.util.Date;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,17 +35,17 @@ public class Subject {
     //借款目的
     private String purpose;
     //募集开始
-    private Date raiseStart;
+    private String raiseStart;
     //募集开始
-    private Date raiseEnd;
+    private String raiseEnd;
     //还款方式
     private Byte refundWay;
     //保障方式
     private Integer safeguardWay;
     //标的开始日期
-    private Date startDate;
+    private String startString;
     //标的结束日期
-    private Date endDate;
+    private String endString;
     //年化率(利率)
     private Double yearRate;
     //一种标对应一个相关文件夹
@@ -53,9 +53,9 @@ public class Subject {
     //是否删除
     private Integer delflag;
     //新日期
-    private Date updateDate;
+    private String upStringString;
     //创建日期
-    private Date createDate;
+    private String createString;
     //借款人姓名
     private String borrowername;
     //借款人id
@@ -139,16 +139,16 @@ public class Subject {
 	public void setPurpose(String purpose) {
 		this.purpose = purpose;
 	}
-	public Date getRaiseStart() {
+	public String getRaiseStart() {
 		return raiseStart;
 	}
-	public void setRaiseStart(Date raiseStart) {
+	public void setRaiseStart(String raiseStart) {
 		this.raiseStart = raiseStart;
 	}
-	public Date getRaiseEnd() {
+	public String getRaiseEnd() {
 		return raiseEnd;
 	}
-	public void setRaiseEnd(Date raiseEnd) {
+	public void setRaiseEnd(String raiseEnd) {
 		this.raiseEnd = raiseEnd;
 	}
 	public Byte getRefundWay() {
@@ -163,17 +163,17 @@ public class Subject {
 	public void setSafeguardWay(Integer safeguardWay) {
 		this.safeguardWay = safeguardWay;
 	}
-	public Date getStartDate() {
-		return startDate;
+	public String getStartString() {
+		return startString;
 	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
+	public void setStartString(String startString) {
+		this.startString = startString;
 	}
-	public Date getEndDate() {
-		return endDate;
+	public String getEndString() {
+		return endString;
 	}
-	public void setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public void setEndString(String endString) {
+		this.endString = endString;
 	}
 	public Double getYearRate() {
 		return yearRate;
@@ -195,17 +195,17 @@ public class Subject {
 	public void setDelflag(Integer delflag) {
 		this.delflag = delflag;
 	}
-	public Date getUpdateDate() {
-		return updateDate;
+	public String getUpStringString() {
+		return upStringString;
 	}
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
+	public void setUpStringString(String upStringString) {
+		this.upStringString = upStringString;
 	}
-	public Date getCreateDate() {
-		return createDate;
+	public String getCreateString() {
+		return createString;
 	}
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+	public void setCreateString(String createString) {
+		this.createString = createString;
 	}
 	public String getBorrowername() {
 		return borrowername;

@@ -23,32 +23,33 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="ajaxContainer">
 	<!-- 异步内容开始 -->
 	<c:forEach items="${subs}" var="sub">
+		<c:if test="${sub[6]==0 }">
 					<ul class="tbList">
 						<li class="first">
 									<span class="ico zq"></span>
-							<h2><em>投</em>${sub[3]}</h2>
+							<h2><em>投</em>${sub[1]}</h2>
 							<i></i>
 						</li>
 						<li class="second">					
 							
 							<div class="txt1">
-								<h2>6.0<span style="font-size:18px;">+1.0%</span></h2>
+								<h2>${sub[2]}<span style="font-size:18px;">+1.0%</span></h2>
 								<p>年化收益</p>
 							</div>
 							
 							<div class="txt2">
-								<h2>￥100.00</h2>
+								<h2>￥${sub[3]}</h2>
 								<p>起购金额(元)</p>
 							</div>
 							
 							<div class="txt2">
-								<h2>6天</h2>
+								<h2>${sub[4]}天</h2>
 								<p>投资期限</p>
 							</div>
 						</li>
 						<li class="three">
 								<a href="#1">企业担保</a><span>中国人保财险承保</span>
-								<p>计息日期：当天投资，立即计息<br>已购人数：421人</p>
+								<p>计息日期：当天投资，立即计息<br>已购人数：${sub[5]+sub[8]}人</p>
 						</li>
 						<li class="four">
 								
@@ -57,7 +58,46 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<a class="abtn" href="/winplus/subject/subjectContent/1638">购买</a>
 						</li>
 					</ul>
+					</c:if>
+					
+					<c:if test="${sub[6]==1 }">
+					<ul class="tbList">
+						<li class="first">
+									<span class="ico cd"></span>
+							<h2><em>投</em>${sub[1]}</h2>
+							<i></i>
+						</li>
+						<li class="second">					
+							
+							<div class="txt1">
+								<h2>${sub[2]}<span style="font-size:18px;">+1.0%</span></h2>
+								<p>年化收益</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>￥${sub[3]}</h2>
+								<p>起购金额(元)</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>${sub[4]}天</h2>
+								<p>投资期限</p>
+							</div>
+						</li>
+						<li class="three">
+								<a href="#1">企业担保</a><span>中国人保财险承保</span>
+								<p>计息日期：当天投资，立即计息<br>已购人数：${sub[5]+sub[8]}人</p>
+						</li>
+						<li class="four">
+								
+						</li>
+						<li class="five">
+							<a class="abtn" href="/winplus/subject/subjectContent/1638">购买</a>
+						</li>
+					</ul>
+					</c:if>
 				</c:forEach>
+				
 	<!-- 异步内容结束 -->
 	
 	

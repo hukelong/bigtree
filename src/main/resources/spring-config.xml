@@ -12,7 +12,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 <!-- 配置service注解扫描 -->
-<context:component-scan base-package="com.demo.lm"></context:component-scan>
+<context:component-scan base-package="com.demo"></context:component-scan>
 
 <!-- 引入外部配置文件 -->
 <context:property-placeholder location="classpath:db.properties"/>
@@ -60,6 +60,6 @@
 <tx:annotation-driven/>
 
 <!-- 配置jpa的Repository接口扫描 -->
-<jpa:repositories base-package="com.demo.hkl" entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
+<jpa:repositories base-package="com.demo" entity-manager-factory-ref="entityManagerFactory"></jpa:repositories>
 
 </beans>

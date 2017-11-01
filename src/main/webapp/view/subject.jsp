@@ -30,12 +30,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <img src="<%=basePath%>/resources/web/images/400Icon.png" onmousemove="this.src = '<%=basePath%>/resources/web/images/400IconActive.png'" onmouseout="	this.src = '<%=basePath%>/resources/web/images/400Icon.png'">
             <div class="detail">
                         <a style="font-size:18px;float:right;margin-top:5px;color:#917739;" href="<%=basePath%>view/login.jsp">登录</a>
-                        <a style="font-size:18px;float:right;margin-right:15px;margin-top:5px;color:#917739;" href="/winplus/web/regis">注册</a>
+                        <a style="font-size:18px;float:right;margin-right:15px;margin-top:5px;color:#917739;" href="<%=basePath%>web/regis">注册</a>
                 <br>4000-999-158
             </div>
             
 <!--               <div class="detail"> -->
-<!--                     	<div style="font-size:16px;float:right;margin-top:5px;color:#917739;">  欢迎尚镜,<a href="/winplus/account/touZiList">[会员中心]</a>,<a href="/winplus/web/logout">[退出]</a></div> -->
+<!--                     	<div style="font-size:16px;float:right;margin-top:5px;color:#917739;">  欢迎尚镜,<a href="<%=basePath%>account/touZiList">[会员中心]</a>,<a href="<%=basePath%>web/logout">[退出]</a></div> -->
 <!--                 <br>4000-999-158 -->
 <!--             </div> -->
 
@@ -104,47 +104,47 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="proMain">
     	<div class="hwpzNav">
     		<ul>
-    			<li class="first"><a class="active" href="/winplus/subject">固收类理财</a></li>
-    			<li class="second"><a href="/winplus/finance">私募基金</a></li>
-    			<li class="three"><a href="/winplus/oversea">海外配置</a></li>
-    			<li class="four"><a href="/winplus/finance">股权基金</a></li>
+    			<li class="first"><a class="active" href="<%=basePath%>view/index.jsp">固收类理财</a></li>
+    			<li class="second"><a href="<%=basePath%>view/finance.jsp">私募基金</a></li>
+    			<li class="three"><a href="<%=basePath%>oversea">海外配置</a></li>
+    			<li class="four"><a href="<%=basePath%>finance">股权基金</a></li>
     		</ul>
     	</div>
         <div class="sdShaix">
         	<ul>
             	<li class="first">标的类型：</li>
             	
-            	<c:forEach items="${subm}" var="su">
-            		<li><a href="/winplus/subject?cid=11&type=11&yearRate=21&period=31&status=41" id="11">${su[1]}</a></li>
-            	</c:forEach>
-<!--                		<li><a href="/winplus/subject?cid=11&type=11&yearRate=21&period=31&status=41" id="11">全部</a></li> -->
-<!--                		<li><a href="/winplus/subject?cid=12&type=11&yearRate=21&period=31&status=41" id="12">固收类理财</a></li> -->
-<!--                		<li><a href="/winplus/subject?cid=13&type=11&yearRate=21&period=31&status=41" id="13">车盈宝</a></li> -->
+<%--             	<c:forEach items="${subm}" var="su"> --%>
+<%--             		<li><a href="<%=basePath%>subject?cid=11&type=11&yearRate=21&period=31&status=41" id="11">${su[1]}</a></li> --%>
+<%--             	</c:forEach> --%>
+                		<li><a href="<%=basePath%>subject?cid=11&type=11&yearRate=21&period=31&status=41" id="11">全部</a></li> 
+                		<li><a href="<%=basePath%>subject?cid=12&type=11&yearRate=21&period=31&status=41" id="12">固收类理财</a></li>
+               		<li><a href="<%=basePath%>subject?cid=13&type=11&yearRate=21&period=31&status=41" id="13">车盈宝</a></li> 
             </ul>
         	<ul>
             	<li class="first">年化收益：</li>
-               		<li><a href="/winplus/subject?cid=21&type=11&yearRate=21&period=31&status=41" id="21">全部</a></li>
-               		<li><a href="/winplus/subject?cid=22&type=11&yearRate=21&period=31&status=41" id="22">6.0%</a></li>
-               		<li><a href="/winplus/subject?cid=23&type=11&yearRate=21&period=31&status=41" id="23">7.0%</a></li>
-               		<li><a href="/winplus/subject?cid=24&type=11&yearRate=21&period=31&status=41" id="24">7.5%</a></li>
-               		<li><a href="/winplus/subject?cid=25&type=11&yearRate=21&period=31&status=41" id="25">8.0%</a></li>
-               		<li><a href="/winplus/subject?cid=25&type=11&yearRate=21&period=31&status=41" id="25">8.0%以上</a></li>
+               		<li><a href="<%=basePath%>subject?cid=21&type=11&yearRate=21&period=31&status=41" id="21">全部</a></li>
+               		<li><a href="<%=basePath%>subject?cid=22&type=11&yearRate=21&period=31&status=41" id="22">6.0%</a></li>
+               		<li><a href="<%=basePath%>subject?cid=23&type=11&yearRate=21&period=31&status=41" id="23">7.0%</a></li>
+               		<li><a href="<%=basePath%>subject?cid=24&type=11&yearRate=21&period=31&status=41" id="24">7.5%</a></li>
+               		<li><a href="<%=basePath%>subject?cid=25&type=11&yearRate=21&period=31&status=41" id="25">8.0%</a></li>
+               		<li><a href="<%=basePath%>subject?cid=25&type=11&yearRate=21&period=31&status=41" id="25">8.0%以上</a></li>
             </ul>
         	<ul>
             	<li class="first">项目期限：</li>
-               		<li><a href="/winplus/subject?cid=31&type=11&yearRate=21&period=31&status=41" id="31">全部</a></li>
-               		<li><a href="/winplus/subject?cid=32&type=11&yearRate=21&period=31&status=41" id="32">15天以下</a></li>
-               		<li><a href="/winplus/subject?cid=33&type=11&yearRate=21&period=31&status=41" id="33">15-30天</a></li>
-               		<li><a href="/winplus/subject?cid=34&type=11&yearRate=21&period=31&status=41" id="34">30-180天</a></li>
-               		<li><a href="/winplus/subject?cid=35&type=11&yearRate=21&period=31&status=41" id="35">180-365天</a></li>
-               		<li><a href="/winplus/subject?cid=36&type=11&yearRate=21&period=31&status=41" id="36">一年以上</a></li>
+               		<li><a href="<%=basePath%>subject?cid=31&type=11&yearRate=21&period=31&status=41" id="31">全部</a></li>
+               		<li><a href="<%=basePath%>subject?cid=32&type=11&yearRate=21&period=31&status=41" id="32">15天以下</a></li>
+               		<li><a href="<%=basePath%>subject?cid=33&type=11&yearRate=21&period=31&status=41" id="33">15-30天</a></li>
+               		<li><a href="<%=basePath%>subject?cid=34&type=11&yearRate=21&period=31&status=41" id="34">30-180天</a></li>
+               		<li><a href="<%=basePath%>subject?cid=35&type=11&yearRate=21&period=31&status=41" id="35">180-365天</a></li>
+               		<li><a href="<%=basePath%>subject?cid=36&type=11&yearRate=21&period=31&status=41" id="36">一年以上</a></li>
             </ul>
         	<ul>
             	<li class="first">标的状态：</li>
-               		<li><a href="/winplus/subject?cid=41&type=11&yearRate=21&period=31&status=41" id="41">全部</a></li>
-               		<li><a href="/winplus/subject?cid=42&type=11&yearRate=21&period=31&status=41" id="42">投标中</a></li>
-               		<li><a href="/winplus/subject?cid=43&type=11&yearRate=21&period=31&status=41" id="43">还款中</a></li>
-               		<li><a href="/winplus/subject?cid=44&type=11&yearRate=21&period=31&status=41" id="44">已完成</a></li>
+               		<li><a href="<%=basePath%>subject?cid=41&type=11&yearRate=21&period=31&status=41" id="41">全部</a></li>
+               		<li><a href="<%=basePath%>subject?cid=42&type=11&yearRate=21&period=31&status=41" id="42">投标中</a></li>
+               		<li><a href="<%=basePath%>subject?cid=43&type=11&yearRate=21&period=31&status=41" id="43">还款中</a></li>
+               		<li><a href="<%=basePath%>subject?cid=44&type=11&yearRate=21&period=31&status=41" id="44">已完成</a></li>
             </ul>
         </div>
 </div>
@@ -154,16 +154,100 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 
-
- <div class="security">
- <iframe src="<%=basePath%>sub" width="950px" height="550px" style="border:0"></iframe>
- </div>
-
-
-
-
-
-
+<div class="ajaxContainer">
+	<!-- 异步内容开始 -->
+	<c:forEach items="${subs}" var="sub">
+		<c:if test="${sub[6]==0 }">
+					<ul class="tbList">
+						<li class="first">
+									<span class="ico zq"></span>
+							<h2><em>投</em>${sub[1]}</h2>
+							<i></i>
+						</li>
+						<li class="second">					
+							
+							<div class="txt1">
+								<h2>${sub[2]}<span style="font-size:18px;">+1.0%</span></h2>
+								<p>年化收益</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>￥${sub[3]}</h2>
+								<p>起购金额(元)</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>${sub[4]}天</h2>
+								<p>投资期限</p>
+							</div>
+						</li>
+						<li class="three">
+								<a href="#1">企业担保</a><span>中国人保财险承保</span>
+								<p>计息日期：当天投资，立即计息<br>已购人数：${sub[5]+sub[8]}人</p>
+						</li>
+						<li class="four">
+								
+						</li>
+						<li class="five">
+							<a class="abtn" href="/winplus/subject/subjectContent/1638">购买</a>
+						</li>
+					</ul>
+					</c:if>
+					
+					<c:if test="${sub[6]==1 }">
+					<ul class="tbList">
+						<li class="first">
+									<span class="ico cd"></span>
+							<h2><em>投</em>${sub[1]}</h2>
+							<i></i>
+						</li>
+						<li class="second">					
+							
+							<div class="txt1">
+								<h2>${sub[2]}<span style="font-size:18px;">+1.0%</span></h2>
+								<p>年化收益</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>￥${sub[3]}</h2>
+								<p>起购金额(元)</p>
+							</div>
+							
+							<div class="txt2">
+								<h2>${sub[4]}天</h2>
+								<p>投资期限</p>
+							</div>
+						</li>
+						<li class="three">
+								<a href="#1">企业担保</a><span>中国人保财险承保</span>
+								<p>计息日期：当天投资，立即计息<br>已购人数：${sub[5]+sub[8]}人</p>
+						</li>
+						<li class="four">
+								
+						</li>
+						<li class="five">
+							<a class="abtn" href="/winplus/subject/subjectContent/1638">购买</a>
+						</li>
+					</ul>
+					</c:if>
+				</c:forEach>
+				
+	<!-- 异步内容结束 -->
+	
+	
+	<div class="llpage">
+		<div class="in">
+			
+				<a class="prev_page">上页</a>
+			
+			
+					<a class="now" >1</a>
+			
+			
+				<a class="next_page" rel="next">下页</a>
+		</div>
+	</div>
+</div>
 
 
 

@@ -4,93 +4,21 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link href="<%=basePath%>resources/style/iconfont.css" rel="stylesheet" type="text/css" />
-<link href="<%=basePath%>resources/style/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="<%=basePath%>resources/style/button.css" rel="stylesheet" type="text/css" />
+</head>
 <link href="<%=basePath%>/resources/web/font/iconfont.css" rel="stylesheet" type="text/css" />
 <link href="<%=basePath%>/resources/web/css/common.css" rel="stylesheet">
 <link href="<%=basePath%>/resources/web/css/jw.css" rel="stylesheet">
 <script src="<%=basePath%>/resources/web/js/jquery.js"></script>
 <script type="text/javascript" src="<%=basePath%>/resources/web/layer/layer.js"></script>
 <script src="<%=basePath%>/resources/web/echart/dist/echarts.js"></script>
-
- <style type="text/css">
-       .error{
-           color: #d43f3a;
-        }
-    </style>
-<style type="text/css">
-#box_login #right_login {
-	width: 385px;
-	background-color: #FFF;
-	padding-bottom:40px
-}
-#box_login #right_login h1 {
-	text-align: center;
-	height: 60px;
-	line-height: 60px;
-	background-color: #1fbba6;
-	color: #FFF;
-	font-size: 22px;
-	font-weight: bold;
-}
-#box_login #right_login h2 {
-	color: #5d5d5d;
-	font-size: 20px;
-	text-align: center;
-	line-height: 80px;
-	height: 80px;
-}
-#userName{
-	width:270px;
-	height:30px;
-	margin-bottom:10px;
-}
-#password{
-	width:270px;
-	height:30px;
-	margin-bottom:10px;
-}
-#mobilePhone{
-	width:270px;
-	height:30px;
-	margin-bottom:10px;
-}
-#code{
-	width:155px;
-	height:30px;
-	margin-bottom:20px;
-	float: left;
-}
-.error {
-    background-color: #f2dede;
-    border: 1px solid #fbefd6;
-    color: #b94a48;
-    display: none;
-    height: 36px;
-    line-height: 36px;
-    padding-left: 20px;
-    text-align: left;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    width: 236px;
-}
-#box_login #right_login .grey{
-	background-color: #8E9A99;
-	border:1px solid #797880;
-	}
-.tabCenter{position:absolute;width:100%;height:100%;z-Index:1;position:fixed}
-</style>
-<script type="text/javascript" src="<%=basePath%>resources/js/jquery.js"></script>
-<script type="text/javascript" src="<%=basePath%>resources/js/bootstrap.js"></script>
-</head>
-
 <body>
-
 
 <!-- Top -->
 <div class="logo container">
@@ -100,12 +28,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <div class="telInfo">
             <img src="<%=basePath%>/resources/web/images/400Icon.png" onmousemove="this.src = '<%=basePath%>/resources/web/images/400IconActive.png'" onmouseout="	this.src = '<%=basePath%>/resources/web/images/400Icon.png'">
-           <div class="detail">
-
+            <div class="detail">
                         <a style="font-size:18px;float:right;margin-top:5px;color:#917739;" href="<%=basePath%>view/login.jsp">登录</a>
-                        <a style="font-size:18px;float:right;margin-right:15px;margin-top:5px;color:#917739;" href="<%=basePath%>web/regis">注册</a>
+                        <a style="font-size:18px;float:right;margin-right:15px;margin-top:5px;color:#917739;" href="<%=basePath%>view/web/regis">注册</a>
                 <br>4000-999-158
             </div>
+            
+<!--               <div class="detail"> -->
+<!--                     	<div style="font-size:16px;float:right;margin-top:5px;color:#917739;">  欢迎尚镜,<a href="<%=basePath%>view/account/touZiList">[会员中心]</a>,<a href="<%=basePath%>view/web/logout">[退出]</a></div> -->
+<!--                 <br>4000-999-158 -->
+<!--             </div> -->
+
         </div>
     </div>
 </div>
@@ -129,7 +62,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </a>
                 </li>
                 <li>
-                    <a class="item" href="<%=basePath%>view/index.jsp">
+                    <a class="item" href="http://www.ying158.com/Home/NewsCenter">
                         新闻中心
                     </a>
                 </li>
@@ -167,59 +100,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
 
-
-
-
-     <div class="proMain">
-    	<div class="container">
-            <div class="row login">
-                <div class="loginPic">
-                    <img src="<%=basePath%>resources/web/images/loginImg.png" />
-                </div>
-                <div class="loginBlock">
-                    <img class="cornerImg" src="<%=basePath%>resources/web/images/loginCorner.png" />
-                    <div class="item item1">
-                        <div class="lLabel">
-                            手机号 
-                        </div>
-                        <div class="lInput">
-                            <img src="<%=basePath%>resources/web/images/userIcon.png" /><input type="text" placeholder="手机号" id="phone" name="phone" class="form-control phone" /><span class="errorInfo">用户名不能为空</span>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="lLabel">
-                            登录密码
-                        </div>
-                        <div class="lInput">
-                            <img src="<%=basePath%>resources/web/images/passwordIcon.png" /><input type="password" placeholder="密码" id="password" name="password" class="form-control password" /><span class="errorInfo"></span>
-                        </div>
-                    </div>
-                    <div class="rest">
-                        <p class="error"></p>
-                        <span id="loginError"></span><a class="forgetLink" href="<%=basePath%>web/forget">忘记密码？</a>
-                    </div>
-                    <div class="rest">
-                        <button class="btn loginBtn submit">立即登录</button>
-                    </div>
-                    <div class="rest">
-                        <span class="registUrl">没有账号？<a href="<%=basePath%>web/regis">免费注册</a></span>
-                    </div>
+<div class="sdbanner probanner"></div>
+    <div class="proMain">
+    	<div class="hwpzNav">
+    		<ul>
+    			<li class="first"><a class="active" href="<%=basePath%>view/index.jsp">固收类理财</a></li>
+    			<li class="second"><a href="<%=basePath%>view/finance.jsp">私募基金</a></li>
+    			<li class="three"><a href="<%=basePath%>view/oversea">海外配置</a></li>
+    			<li class="four"><a href="<%=basePath%>view/finance">股权基金</a></li>
+    		</ul>
+    	</div>
         
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
-<%-- <script type="text/javascript" src="<%=basePath%>/resources/web/js/login.js"></script> --%>
-<!-- <script type="text/javascript"> -->
-
-<!-- </script> -->
-   
-
-
-
-
-
+ <div class="security">
+ <iframe src="<%=basePath%>finance" width="950" height="850px" style="border:0"></iframe>
+ </div>
 
 
     <div class="security">
@@ -324,8 +220,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</div>
 		</div>
 	</div>
-
-
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?06cf97732baac1a65bed8ae95f2384aa";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 </body>
